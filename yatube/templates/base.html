@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+    crossorigin="anonymous">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  <header>
+      <!-- Это тег шаблонизатора include, сюда будет включён код
+      из файла includes/header.html -->
+      {% include 'includes/header.html' %}
+  </header>
+    <main>
+      {% block content %}
+        Ой! Контент пока не подвезли :(
+      {% endblock %}
+    </main>
+  <footer>
+      <!-- Это тег шаблонизатора include, сюда будет включён код
+      из файла includes/header.html -->
+      {% include 'includes/footer.html' %}
+  </footer>
+</body>
+</html>
