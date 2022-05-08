@@ -7,7 +7,12 @@ from django.http import HttpResponse
 def index(request):
     #return HttpResponse('Главная страница')
     template = 'posts/index.html'
-    return render(request, template)
+    context = {
+        # В словарь можно передать переменную
+        'title': text,
+        # А можно сразу записать значение в словарь. Но обычно так не делают
+        'text': 'Главная страница'}
+    return render(request, template, context)
 
 
 def group_posts(request, slug):

@@ -13,12 +13,15 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Последние обновления на сайте</title>
+    {% extends 'base.html' %}
+    <title> {% block title %} Это главная страница проекта! {% endblock %}
+    </title>
   </head>
   <body>
     <header>
       {% include 'includes/header.html' %}
     </header>
+     {% block content %}
     <main>
       <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">
@@ -89,6 +92,7 @@
         <!-- под последним постом нет линии -->
       </div>
     </main>
+    {% endblock %}
     <!-- Использованы классы бустрапа: -->
     <!-- border-top: создаёт тонкую линию сверху блока -->
     <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->

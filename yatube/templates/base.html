@@ -7,7 +7,7 @@
     rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
     crossorigin="anonymous">
-    <title>{% block title %}{% endblock %}</title>
+    {% block title %}<title> {{ title }} </title>{% endblock %}
 </head>
 <body>
   <header>
@@ -17,7 +17,7 @@
   </header>
     <main>
       {% block content %}
-        Ой! Контент пока не подвезли :(
+        {{ text }}
       {% endblock %}
     </main>
   <footer>
