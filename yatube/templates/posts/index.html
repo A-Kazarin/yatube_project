@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
-    <title> jhkjhkkjh
-    </title>
-  <body>
+  {% block title %} jhkjhkkjh {% endblock %}
+
      {% block content %}
-    <main>
       <!-- класс py-5 создает отступы сверху и снизу блока -->
       <div class="container py-5">
         <h1>Последние обновления на сайте</h1>
@@ -72,15 +70,8 @@
         </article>
         <!-- под последним постом нет линии -->
       </div>
-    </main>
     {% endblock %}
     <!-- Использованы классы бустрапа: -->
     <!-- border-top: создаёт тонкую линию сверху блока -->
     <!-- text-center: выравнивает текстовые блоки внутри блока по центру -->
-    <!-- py-3: контент внутри размещается с отступом сверху и снизу -->
-    <footer>
-      <!-- Это тег шаблонизатора include, сюда будет включён код
-      из файла includes/header.html -->
-      {% include 'includes/footer.html' %}
-    </footer>
-  </body>
+
