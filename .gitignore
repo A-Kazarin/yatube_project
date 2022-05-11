@@ -132,6 +132,6 @@ dmypy.json
 # Dev/yatube_project/.gitignore
 /venv
 /.idea/
-.vscode/
+/.vscode/
 
 
