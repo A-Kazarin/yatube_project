@@ -14,3 +14,12 @@ class Post(models.Model):
 
     # Тип: ForeignKey, ссылка на модель User
     author = models.ForeignKey(User, on_delete=models.CASCADE)
+    group = models.ForeignKey('Group', blank=True, null=True, on_delete=models.CASCADE)
+
+class Group(models.Model):
+    title = models.CharField(max_length=100, verbose_name='Название группы')
+    slug = models.SlugField(max_length=100, db_index=True, verbose_name= 'URL')
+    description = models.TextField()
+
+    def __str__(self):
+        return self.title
