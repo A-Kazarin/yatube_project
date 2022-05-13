@@ -1,19 +1,23 @@
-
-# Create your views here.
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Post, Group
 
 
 def index(request):
+    posts = Post.objects.order_by('-pub_date')[:10]
+    # В словаре context отправляем информацию в шаблон
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'posts/index.html', context)
     #return HttpResponse('Главная страница')
-    template = 'posts/index.html'
+    ##template = 'posts/index.html'
     #context = {
         # В словарь можно передать переменную
         #'title': text,
         # А можно сразу записать значение в словарь. Но обычно так не делают
        # 'text': 'Главная страница'}
-    return render(request, template) #context)
+   ## return render(request, template) #context)
 
 
 def group_posts(request, slug):
