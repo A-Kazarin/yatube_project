@@ -22,12 +22,11 @@
       из файла includes/header.html -->
       {% include 'includes/header.html' %}
   </header>
-    <main>
+    <main class="container py-5">
       {% block content %}
           контента пока нет...
       {% endblock %}
     </main>
-
       <!-- Это тег шаблонизатора include, сюда будет включён код
       из файла includes/header.html -->
     {% include 'includes/footer.html' %}
